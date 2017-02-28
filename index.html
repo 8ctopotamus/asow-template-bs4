@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>&lt;!-- Teamname --&gt;</title>
+
+        <!--chocolat-->
+        <link rel="stylesheet" href="http://advancewrestling.greenrope.com/users/myteam41396/Media171.css" type="text/css" media="screen" charset="utf-8">
+
+        <!-- fonts -->
+    		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic' rel='stylesheet' type='text/css'>
+
+        <!-- animate.css -->
+        <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/animate.min.css" type="text/css" />
+
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <link href="http://advancewrestling.greenrope.com/users/myteam41396/Media138.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!--favicon-->
+        <link rel="shortcut icon" href="http://advancewrestling.greenrope.com/users/myteam41396/Media222.ico" />
+
+    <!-- custom styles -->
+    <style media="screen">
+
+    .navbar-brand>img {
+      width: 200px;
+    }
+
+      h1, h2, h3, h4, h5, h6,
+      .h1, .h2, .h3, .h4, .h5, .h6,
+      #main-nav {
+          text-transform: uppercase;
+          font-family: 'Oswald', 'Open Sans', sans-serif;
+          font-weight: bold;
+      }
+
+      .section-padding {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .red-bkgd {
+        background-color: #bf0a30;
+        color: #fff;
+      }
+
+      .btn-black {
+        color: #fff;
+        background-color: #000;
+        border-top: 2px solid #555;
+      }
+
+      .col-extra-padding {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      .customPage h1 {
+        margin: 60px auto;
+      }
+
+      .slider-arrow {
+        height: 30px;
+        margin-top: -10px;
+        font-size: 30px;
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        display: inline-block;
+      }
+
+      #main-nav {
+        margin-bottom: 0;
+      }
+
+      #top-bar {
+        padding-top: 8px;
+        padding-bottom: 6px;
+        background-color: #000;
+        color: #fff;
+        border-bottom: 3px solid #bf0a30;
+      }
+      #top-bar .fa-stack {color: black;}
+
+      .top-bar-right {
+        float: right;
+      }
+
+
+      .well-square {
+          border-radius: 0;
+      }
+
+      .well-footer {
+        margin-top: 40px;
+        margin-bottom: 0;
+      }
+
+      .well-footer ul {
+        font-weight: bold;
+        list-style: none;
+        padding-left: 0;
+      }
+
+
+      /* Custom slider animaciones */
+      .main-container {
+        padding: 10px 15px;
+      }
+      .carousel .item {
+      	min-height: 500px;
+      	height: 100%;
+      	width:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .carousel-caption h3 small {color: #fff;}
+
+      .carousel-caption h3,
+      .carousel .icon-container,
+      .carousel-caption button {
+        background-color: rgba(0, 0, 0, .65);
+      }
+      .carousel-caption h3 {
+      	padding: .5em;
+      }
+      .carousel .icon-container {
+      	display: inline-block;
+      	font-size: 25px;
+      	line-height: 25px;
+      	padding: 1em;
+      	text-align: center;
+      	border-radius: 50%;
+      }
+      .carousel-caption button {
+      	border-color: #fff;
+      	margin-top: 1em;
+      }
+
+      /* Animation delays */
+      .carousel-caption h3:first-child {
+      	animation-delay: 1s;
+      }
+      .carousel-caption h3:nth-child(2) {
+      	animation-delay: 2s;
+      }
+      .carousel-caption button {
+      	animation-delay: 3s;
+      }
+
+
+      .carousel-arrow {
+        position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+      }
+
+
+.chocolat-loader{
+  background:url(http://app.greenrope.com/users/myteam41396/Media231.gif);
+}
+.chocolat-wrapper .chocolat-left{
+  background:url(http://app.greenrope.com/users/myteam41396/Media230.png) 50% 50% no-repeat;
+}
+.chocolat-wrapper .chocolat-right{
+  background:url(http://app.greenrope.com/users/myteam41396/Media227.png)  50% 50% no-repeat;
+}
+.chocolat-wrapper .chocolat-close{
+  background:url(http://app.greenrope.com/users/myteam41396/Media229.png) 50% 50% no-repeat;
+}
+.chocolat-wrapper .chocolat-fullscreen{
+  /*fullscreen*/
+    background: url(//advancewrestling.greenrope.com/users/myteam41396/Media226.png) 50% 50% no-repeat;
+}
+.chocolat-cover .chocolat-content .chocolat-right{
+  background:url(../images/right-compact.png) 100% 50% no-repeat;
+}
+.chocolat-cover .chocolat-content .chocolat-left{
+  background:url(../images/left-compact.png) 0% 50% no-repeat;
+}
+.chocolat-cover .chocolat-content .chocolat-close{
+    background:url(../images/close-compact.png) 0% center no-repeat;
+}
+
+    .slide1 {background-image: url(http://app.greenrope.com/users/myteam41396/Media170.jpg);}
+    .slide2 {background-image: url(http://app.greenrope.com/users/myteam41396/Media168.jpg);}
+    .slide3 {background-image: url(http://app.greenrope.com/users/myteam41396/Media169.jpg);}
+
+    @media(max-width: 555px) {
+      .slide1 {background-image: url(http://app.greenrope.com/users/myteam41396/Media350.png);}
+      .slide2 {background-image: url(http://app.greenrope.com/users/myteam41396/Media352.png);}
+      .slide3 {background-image: url(http://app.greenrope.com/users/myteam41396/Media351.png);}
+    }
+
+
+    /* shows  dropdown on hover when using mouse */
+    @media(min-width: 767px) {
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+    }
+
+      /* media queries */
+      @media(max-width: 970px) {
+        .navbar-nav>li>a {
+          font-size: 14px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .navbar-pull-me-right {
+          float: none !important;
+          margin-right: 0;
+        }
+      }
+
+      @media (min-width: 960px) and (max-width: 1200px) {
+         .navbar-nav > li > a {
+           padding-left: 5px;
+           padding-right: 5px;
+         }
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div id="top-bar" class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="top-bar-right"> <strong><i class="fa fa-phone"></i> 608.469.2920 &nbsp; &nbsp;</strong>
+     <strong><a href="mailto:brad@advancewrestling.com">brad@advancewrestling.com</a>&nbsp;&nbsp;</strong>
+                    <a
+                    href="https://www.facebook.com/Advance-School-of-Wrestling-LLC-166598420023570/"
+                    target="_blank" title="Like on Facebook"> <span class="fa-stack fa-lg">
+
+                    <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
+
+                    <i class="fa fa-stack-1x fa-facebook"></i>
+
+                  </span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <nav id="main-nav" class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="http://advancewrestling.greenrope.com/">
+        <img src="http://app.greenrope.com/users/myteam41396/Media140.png" alt="Advanced School of Wrestling logo" />
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="dropdown nav-item"> <a href="http://advancewrestling.greenrope.com/wrestling-training-wi"
+              class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">PROGRAMS <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li class="hidden-sm-up-block hidden-xs-down hidden-md-up-block dropdown-item"><a href="http://advancewrestling.greenrope.com/wrestling-training-wi">Wrestling Training Programs</a>
+                  </li>
+                  <li role="separator" class="divider hidden-sm-up-block hidden-xs-down hidden-md-up-block dropdown-item"></li>
+                  <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/high-school-wrestling-wi">Highschool</a>
+                  </li>
+                  <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/kids-wrestling-wi">Kids (3rd-8th)</a>
+                  </li>
+                  <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/private-training-sessions">Private Sessions</a>
+                  </li>
+                  <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/focus-training-groups">Focus Groups</a>
+                  </li>
+                  <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/wrestling-team-clinincs">Team Clinics</a>
+                  </li>
+                  <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/strength-conditioning">Strength &amp; Conditioning</a>
+                  </li>
+                  <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/nutrition">Nutrition</a>
+                  </li>
+              </ul>
+          </li>
+          <li class="dropdown nav-item"> <a href="http://advancewrestling.greenrope.com/hall-of-fame" class="dropdown-toggle nav-link"
+              data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HALL OF FAME <span class="caret"></span></a>
+              <ul
+              class="dropdown-menu">
+                  <li class="hidden-sm-up-block hidden-xs-down hidden-md-up-block dropdown-item"><a href="http://advancewrestling.greenrope.com/hall-of-fame">Hall of Fame</a>
+                  </li>
+                  <li role="separator" class="divider hidden-sm-up-block hidden-xs-down hidden-md-up-block dropdown-item"></li>
+                  <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/state-champions">State Champions</a>
+                  </li>
+                  <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/national">National</a>
+                  </li>
+                  <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/ncaa">NCAA</a>
+                  </li>
+                  <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/olympians">Olympians</a>
+                  </li>
+      </ul>
+      </li>
+      <li class="dropdown nav-item"> <a href="http://advancewrestling.greenrope.com/wrestling-photos" class="dropdown-toggle nav-link"
+          data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Wrestling Photos <span class="caret"></span></a>
+          <ul
+          class="dropdown-menu">
+              <li class="hidden-sm-up-block hidden-xs-down hidden-md-up-block dropdown-item"><a href="http://advancewrestling.greenrope.com/wrestling-photos">Wrestling Photos</a>
+              </li>
+              <li role="separator" class="divider hidden-sm-up-block hidden-xs-down hidden-md-up-block dropdown-item"></li>
+              <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/high-school-wrestling-photos">Highschool Photos</a>
+              </li>
+              <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/kids-wrestling-photos">Kids Photos</a>
+              </li>
+              </ul>
+      </li>
+      <li class="dropdown nav-item"> <a href="/about-wi-wrestling-school" class="dropdown-toggle nav-link"
+          data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT <span class="caret"></span></a>
+          <ul
+          class="dropdown-menu">
+              <li class="hidden-sm-up-block hidden-xs-down hidden-md-up-block dropdown-item"><a href="http://advancewrestling.greenrope.com/about-wi-wrestling-school">ABOUT ASOW</a>
+              </li>
+              <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/why-join-advance">Why Join Advance?</a>
+              </li>
+              <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/wrestling-coach-bios">Coach Bios</a>
+              </li>
+              <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/wrestling-facility-madison">Facilities</a>
+              </li>
+              <li class="dropdown-item"><a href="http://advancewrestling.greenrope.com/wrestling-reviews">Reviews</a>
+              </li>
+              </ul>
+      </li>
+      <li class="nav-item"><a href="calendar" class="nav-link">CALENDAR</a>
+      </li>
+      <li class="nav-item"><a href="contact-us" class="nav-link">CONTACT US</a>
+      </li>
+      </ul>
+      </div>
+    </nav>
+
+
+
+
+
+
+    <!-- load the homepage content -->
+    <div id="homepageMain">
+        <div id="homepage">
+
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <!-- First slide -->
+                    <div class="item active deepskyblue slide1 carousel-item">
+                        <div class="carousel-caption">
+                             <h3 data-animation="animated bounceInUp">
+
+                      Wrestling Programs
+
+                      <br /><small>Designed for Serious Athletes Looking to Advance.</small><br /><br />
+
+                      <a href="http://advancewrestling.greenrope.com/wrestling-training-wi" class="btn btn-secondary">View All Programs</a>
+
+                    </h3>
+                        </div>
+                    </div>
+                    <!-- /.item -->
+                    <!-- Second slide -->
+                    <div class="item skyblue slide2 carousel-item">
+                        <div class="carousel-caption">
+                             <h3 data-animation="animated bounceInUp">
+
+                      Intensity, Heart, and Dedication.
+
+                      <br /><small>A Team of Champions!</small><br /><br />
+
+                      <a href="http://advancewrestling.greenrope.com/wrestling-training-wi" class="btn btn-secondary">View All Programs</a>
+
+                    </h3>
+                        </div>
+                    </div>
+                    <!-- /.item -->
+                    <!-- Third slide -->
+                    <div class="item darkerskyblue slide3 carousel-item">
+                        <div class="carousel-caption">
+                             <h3 data-animation="animated bounceInUp">
+
+                      Facts Don't Lie!
+
+                      <br /><small>145+ State Championships, 20+ National Championships, 90+ All-Americans &amp; Over 340 High School State Qualifiers since 2001.</small><br /><br />
+
+                      <a href="http://advancewrestling.greenrope.com/wrestling-training-wi" class="btn btn-secondary">View All Programs</a>
+
+                    </h3>
+                        </div>
+                    </div>
+                    <!-- /.item -->
+                </div>
+                <!-- /.carousel-inner -->
+            </div>
+            <!-- /.carousel -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Homepage -->
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid text-center section-padding red-bkgd">
+                <div class="row">
+                    <div class="col-lg-4 col-extra-padding">
+                         <h2>Who Are We?</h2>
+                        <p>Since 2001, Advance School of Wrestling and its coaches have helped Wisconsin
+                            area wrestlers reach their full potential as competitors both on and off
+                            the mat.</p>
+                        <p><a class="btn btn-black" href="/about-wi-wrestling-school" role="button">Learn More »</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-extra-padding">
+                         <h2>Why Advance?</h2>
+                        <p>ASOW gives wrestling athletes the ability to train year round at one of
+                            the finest wrestling facilities in the country with specialized programs
+                            geared to get real results.</p>
+                        <p><a class="btn btn-black" href="/why-join-advance" role="button">Learn More »</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-extra-padding">
+                         <h2>Wrestling Programs</h2>
+                        <p>Advance School of Wrestling offers a variety of training programs year
+                            round for high school students and kids in 5-8 grades in Freestyle, Greco
+                            or Folkstyle wrestling.</p>
+                        <p><a class="btn btn-black" href="/wrestling-training-wi" role="button">Learn More »</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- /container -->
+            <div class="container-fluid card bg-faded card-block mb-3 card bg-faded card-block mb-3-square section-padding">
+                <div class="row text-center" style="margin-bottom: 50px;">
+                    <div class="col-lg-3 col-extra-padding"> <a href="/focus-training-groups" style="color: black;">
+
+                      <img src="http://app.greenrope.com/users/myteam41396/Media166.png" alt="Focus Groups" class="mx-auto" />
+
+                      <h2>Private Lessons</h2>
+
+                    </a>
+                        <p>Focus Groups are available for 2-8 wrestlers by appointment for small
+                            group training on specific areas..</p>
+                        <p><a class="btn btn-black" href="/focus-training-groups" role="button">More Info »</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-extra-padding"> <a href="/wrestling-team-clinincs/" style="color: black;">
+
+                      <img src="http://app.greenrope.com/users/myteam41396/Media167.png" alt="Team Clinics" class="mx-auto" />
+
+                      <h2>Wrestling Team Clinics</h2>
+
+                    </a>
+                        <p>Team Clinics are usually 1-2 days long and can include your whole team
+                            meeting at our facility or yours.</p>
+                        <p><a class="btn btn-black" href="/wrestling-team-clinincs/" role="button">More Info »</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-extra-padding"> <a href="/strength-conditioning/" style="color: black;">
+
+                      <img src="http://app.greenrope.com/users/myteam41396/Media165.png" alt="Strength and Conditioning" class="mx-auto" />
+
+                      <h2>Strength &amp; Conditioning</h2>
+
+                    </a>
+                        <p>Our comprehensive program progresses athletes based on age and physicality
+                            toward reaching goals.</p>
+                        <p><a class="btn btn-black" href="/strength-conditioning/" role="button">More Info »</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-extra-padding"> <a href="/nutrition/" style="color: black;">
+
+                      <img src="http://app.greenrope.com/users/myteam41396/Media164.png" alt="Nutrition" class="mx-auto" />
+
+                      <h2>Nutrition</h2>
+
+                      </a>
+                        <p>Members receive nutritional guidance and meal plans for the ultimate competitive
+                            edge in your training.</p>
+                        <p><a class="btn btn-black" href="/nutrition/" role="button">More Info »</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KtkbW7fQego"
+                            frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                         <h2>Premiere Wrestling Training in Madison, WI</h2>
+                        <p>See why Advance School of Wrestling is the ultimate solution for athletes
+                            ready to move up in their game. Our facility provides over 4,000 square
+                            feet of mat space specifically designed for wrestling training and sports
+                            conditioning. Plus our coaches are experienced and motivating! Kids and
+                            high school wrestlers love working out at Advance and learning new wrestling
+                            techniques!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /container-fluid -->
+            <div class="container section-padding">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <!-- no panel -->
+                        <p class="lead">With 30+ years of experience wrestling and training wrestlers, we have
+                            the results to prove that our training programs work. Select custom options
+                            based on your age level or goals.</p>
+                        <p><a class="btn btn-secondary" href="/wrestling-training-wi/" role="button">View All Programs »</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <div class="card">
+                            <div class="card-block">
+                                 <h3 class="h4">High School Wrestling</h3>
+                                <p>Check out upcoming training sessions for high school wrestling. Several
+                                    options available.</p>
+                                <p><strong><a class="text-primary" href="/high-school-wrestling-wi/" role="button">View details »</a></strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <div class="card">
+                            <div class="card-block">
+                                 <h3 class="h4">Kids Wrestling</h3>
+                                <p>Kids wrestling training is also offered year round. See which programs
+                                    are best for you.</p>
+                                <p><strong><a class="text-primary" href="/kids-wrestling-wi/" role="button">View details »</a></strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <div class="card">
+                            <div class="card-block">
+                                 <h3 class="h4">Private Wrestling Sessions</h3>
+                                <p>Private wrestling sessions provide the chance to take a custom approach
+                                    to your game.</p>
+                                <p><strong><a class="text-primary" href="/private-training-sessions/" role="button">View details »</a></strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /container -->
+        </div>
+    </div>
+
+
+
+    <!-- inner page content container -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="Page1" class="customPage">
+            <div id="Page1content" class="customPageContent"><!-- Page1content --></div>
+          </div>
+          <div id="Page2" class="customPage" >
+            <div id="Page2content" class="customPageContent"><!-- Page2content --></div>
+          </div>
+          <div id="Page3" class="customPage" >
+            <div id="Page3content" class="customPageContent"><!-- Page3content --></div>
+          </div>
+          <div id="Page4" class="customPage" >
+            <div id="Page4content" class="customPageContent"><!-- Page4content --></div>
+          </div>
+          <div id="Page5" class="customPage" >
+            <div id="Page5content" class="customPageContent"><!-- Page5content --></div>
+          </div>
+          <div id="Page6" class="customPage" >
+            <div id="Page6content" class="customPageContent"><!-- Page6content --></div>
+          </div>
+          <div id="Page7" class="customPage" >
+            <div id="Page7content" class="customPageContent"><!-- Page7content --></div>
+          </div>
+          <div id="Page8" class="customPage" >
+            <div id="Page8content" class="customPageContent"><!-- Page8content --></div>
+          </div>
+          <div id="Page9" class="customPage" >
+            <div id="Page9content" class="customPageContent"><!-- Page9content --></div>
+          </div>
+          <div id="Page10" class="customPage" >
+            <div id="Page10content" class="customPageContent"><!-- Page10content --></div>
+          </div>
+          <div id="Page11" class="customPage" >
+            <div id="Page11content" class="customPageContent"><!-- Page11content --></div>
+          </div>
+          <div id="Page12" class="customPage" >
+            <div id="Page12content" class="customPageContent"><!-- Page12content --></div>
+          </div>
+          <div id="Page13" class="customPage" >
+            <div id="Page13content" class="customPageContent"><!-- Page13content --></div>
+          </div>
+          <div id="Page14" class="customPage" >
+            <div id="Page14content" class="customPageContent"><!-- Page14content --></div>
+          </div>
+          <div id="Page15" class="customPage" >
+            <div id="Page15content" class="customPageContent"><!-- Page15content --></div>
+          </div>
+          <div id="Page16" class="customPage" >
+            <div id="Page16content" class="customPageContent"><!-- Page16content --></div>
+          </div>
+          <div id="Page17" class="customPage" >
+            <div id="Page17content" class="customPageContent"><!-- Page17content --></div>
+          </div>
+          <div id="Page18" class="customPage" >
+            <div id="Page18content" class="customPageContent"><!-- Page18content --></div>
+          </div>
+          <div id="Page19" class="customPage" >
+            <div id="Page19content" class="customPageContent"><!-- Page19content --></div>
+          </div>
+          <div id="Page20" class="customPage" >
+            <div id="Page20content" class="customPageContent"><!-- Page20content --></div>
+          </div>
+          <div id="Page21" class="customPage" >
+            <div id="Page21content" class="customPageContent"><!-- Page21content --></div>
+          </div>
+          <div id="Page22" class="customPage" >
+            <div id="Page22content" class="customPageContent"><!-- Page22content --></div>
+          </div>
+          <div id="Page23" class="customPage" >
+            <div id="Page23content" class="customPageContent"><!-- Page23content --></div>
+          </div>
+          <div id="Page24" class="customPage" >
+            <div id="Page24content" class="customPageContent"><!-- Page24content --></div>
+          </div>
+          <div id="Page25" class="customPage" >
+            <div id="Page25content" class="customPageContent"><!-- Page25content --></div>
+          </div>
+          <div id="Page26" class="customPage" >
+            <div id="Page26content" class="customPageContent"><!-- Page26content --></div>
+          </div>
+          <div id="Page27" class="customPage" >
+            <div id="Page27content" class="customPageContent"><!-- Page27content --></div>
+          </div>
+          <div id="Page28" class="customPage" >
+            <div id="Page28content" class="customPageContent"><!-- Page28content --></div>
+          </div>
+          <div id="Page29" class="customPage" >
+            <div id="Page29content" class="customPageContent"><!-- Page29content --></div>
+          </div>
+          <div id="Page30" class="customPage" >
+            <div id="Page30content" class="customPageContent"><!-- Page30content --></div>
+          </div>
+          <div id="Page31" class="customPage" >
+            <div id="Page31content" class="customPageContent"><!-- Page31content --></div>
+          </div>
+          <div id="Page32" class="customPage" >
+            <div id="Page32content" class="customPageContent"><!-- Page32content --></div>
+          </div>
+          <div id="Page33" class="customPage" >
+            <div id="Page33content" class="customPageContent"><!-- Page33content --></div>
+          </div>
+          <div id="Page34" class="customPage" >
+            <div id="Page34content" class="customPageContent"><!-- Page34content --></div>
+          </div>
+          <div id="Page35" class="customPage" >
+            <div id="Page35content" class="customPageContent"><!-- Page35content --></div>
+          </div>
+          <div id="Page36" class="customPage" >
+            <div id="Page36content" class="customPageContent">
+              <!-- Page36content -->
+            </div>
+          </div>
+          <div id="Page37" class="customPage" >
+            <div id="Page37content" class="customPageContent">
+              <!-- Page37content -->
+            </div>
+          </div>
+          <div id="Page38" class="customPage" >
+            <div id="Page38content" class="customPageContent"><!-- Page38content --></div>
+          </div>
+          <div id="Page39" class="customPage" >
+            <div id="Page39content" class="customPageContent"><!-- Page39content --></div>
+          </div>
+          <div id="Page40" class="customPage" >
+            <div id="Page40content" class="customPageContent"><!-- Page40content --></div>
+          </div>
+          <div id="Page41" class="customPage" >
+            <div id="Page41content" class="customPageContent"><!-- Page41content --></div>
+          </div>
+          <div id="Page42" class="customPage" >
+            <div id="Page42content" class="customPageContent"><!-- Page42content --></div>
+          </div>
+          <div id="Page43" class="customPage" >
+            <div id="Page43content" class="customPageContent">
+              <!-- Page43content -->
+            </div>
+          </div>
+          <div id="Page44" class="customPage" >
+            <div id="Page44content" class="customPageContent"><!-- Page44content --></div>
+          </div>
+          <div id="Page45" class="customPage" >
+            <div id="Page45content" class="customPageContent"><!-- Page45content --></div>
+          </div>
+          <div id="Page46" class="customPage" >
+            <div id="Page46content" class="customPageContent"><!-- Page46content --></div>
+          </div>
+          <div id="Page47" class="customPage" >
+            <div id="Page47content" class="customPageContent"><!-- Page47content --></div>
+          </div>
+          <div id="Page48" class="customPage" >
+            <div id="Page48content" class="customPageContent"><!-- Page48content --></div>
+          </div>
+          <div id="Page49" class="customPage" >
+            <div id="Page49content" class="customPageContent"><!-- Page49content --></div>
+          </div>
+          <div id="Page50" class="customPage" >
+            <div id="Page50content" class="customPageContent"><!-- Page50content --></div>
+          </div>
+          <div id="Page51" class="customPage" >
+            <div id="Page51content" class="customPageContent"><!-- Page51content --></div>
+          </div>
+          <div id="Page52" class="customPage" >
+            <div id="Page52content" class="customPageContent"><!-- Page52content --></div>
+          </div>
+          <div id="Page53" class="customPage" >
+            <div id="Page53content" class="customPageContent"><!-- Page53content --></div>
+          </div>
+          <div id="Page54" class="customPage" >
+            <div id="Page54content" class="customPageContent"><!-- Page54content --></div>
+          </div>
+          <div id="Page55" class="customPage" >
+            <div id="Page55content" class="customPageContent"><!-- Page55content --></div>
+          </div>
+          <div id="Page56" class="customPage" >
+            <div id="Page56content" class="customPageContent"><!-- Page56content --></div>
+          </div>
+          <div id="Page57" class="customPage" >
+            <div id="Page57content" class="customPageContent"><!-- Page57content --></div>
+          </div>
+          <div id="Page58" class="customPage" >
+            <div id="Page58content" class="customPageContent"><!-- Page58content --></div>
+          </div>
+          <div id="Page59" class="customPage" >
+            <div id="Page59content" class="customPageContent"><!-- Page59content --></div>
+          </div>
+          <div id="Page60" class="customPage" >
+            <div id="Page60content" class="customPageContent"><!-- Page60content --></div>
+          </div>
+          <div id="Page61" class="customPage" >
+            <div id="Page61content" class="customPageContent"><!-- Page61content --></div>
+          </div>
+          <div id="Page62" class="customPage" >
+            <div id="Page62content" class="customPageContent"><!-- Page62content --></div>
+          </div>
+          <div id="Page63" class="customPage" >
+            <div id="Page63content" class="customPageContent"><!-- Page63content --></div>
+          </div>
+          <div id="Page64" class="customPage" >
+            <div id="Page64content" class="customPageContent"><!-- Page64content --></div>
+          </div>
+          <div id="Page65" class="customPage" >
+            <div id="Page65content" class="customPageContent"><!-- Page65content --></div>
+          </div>
+          <div id="Page66" class="customPage" >
+            <div id="Page66content" class="customPageContent"><!-- Page66content --></div>
+          </div>
+          <div id="Page67" class="customPage" >
+            <div id="Page67content" class="customPageContent"><!-- Page67content --></div>
+          </div>
+          <div id="Page68" class="customPage" >
+            <div id="Page68content" class="customPageContent"><!-- Page68content --></div>
+          </div>
+          <div id="Page69" class="customPage" >
+            <div id="Page69content" class="customPageContent"><!-- Page69content --></div>
+          </div>
+          <div id="Page70" class="customPage" >
+            <div id="Page70content" class="customPageContent"><!-- Page70content --></div>
+          </div>
+          <div id="Page71" class="customPage" >
+            <div id="Page71content" class="customPageContent"><!-- Page71content --></div>
+          </div>
+          <div id="Page72" class="customPage" >
+            <div id="Page72content" class="customPageContent"><!-- Page72content --></div>
+          </div>
+          <div id="Page73" class="customPage" >
+            <div id="Page73content" class="customPageContent"><!-- Page73content --></div>
+          </div>
+          <div id="Page74" class="customPage" >
+            <div id="Page74content" class="customPageContent"><!-- Page74content --></div>
+          </div>
+          <div id="Page75" class="customPage" >
+            <div id="Page75content" class="customPageContent"><!-- Page75content --></div>
+          </div>
+          <div id="Page76" class="customPage" >
+            <div id="Page76content" class="customPageContent"><!-- Page76content --></div>
+          </div>
+          <div id="Page77" class="customPage" >
+            <div id="Page77content" class="customPageContent"><!-- Page77content --></div>
+          </div>
+          <div id="Page78" class="customPage" >
+            <div id="Page78content" class="customPageContent"><!-- Page78content --></div>
+          </div>
+          <div id="Page79" class="customPage" >
+            <div id="Page79content" class="customPageContent"><!-- Page79content --></div>
+          </div>
+          <div id="Page80" class="customPage" >
+            <div id="Page80content" class="customPageContent"><!-- Page80content --></div>
+          </div>
+          <div id="Page81" class="customPage" >
+            <div id="Page81content" class="customPageContent"><!-- Page81content --></div>
+          </div>
+          <div id="Page82" class="customPage" >
+            <div id="Page82content" class="customPageContent"><!-- Page82content --></div>
+          </div>
+          <div id="Page83" class="customPage" >
+            <div id="Page83content" class="customPageContent"><!-- Page83content --></div>
+          </div>
+          <div id="Page84" class="customPage" >
+            <div id="Page84content" class="customPageContent"><!-- Page84content --></div>
+          </div>
+          <div id="Page85" class="customPage" >
+            <div id="Page85content" class="customPageContent"><!-- Page85content --></div>
+          </div>
+          <div id="Page86" class="customPage" >
+            <div id="Page86content" class="customPageContent"><!-- Page86content --></div>
+          </div>
+          <div id="Page87" class="customPage" >
+            <div id="Page87content" class="customPageContent"><!-- Page87content --></div>
+          </div>
+          <div id="Page88" class="customPage" >
+            <div id="Page88content" class="customPageContent"><!-- Page88content --></div>
+          </div>
+          <div id="Page89" class="customPage" >
+            <div id="Page89content" class="customPageContent"><!-- Page89content --></div>
+          </div>
+          <div id="Page90" class="customPage" >
+            <div id="Page90content" class="customPageContent"><!-- Page90content --></div>
+          </div>
+          <div id="Page91" class="customPage" >
+            <div id="Page91content" class="customPageContent"><!-- Page91content --></div>
+          </div>
+          <div id="Page92" class="customPage" >
+            <div id="Page92content" class="customPageContent"><!-- Page92content --></div>
+          </div>
+          <div id="Page93" class="customPage" >
+            <div id="Page93content" class="customPageContent"><!-- Page93content --></div>
+          </div>
+          <div id="Page94" class="customPage" >
+            <div id="Page94content" class="customPageContent"><!-- Page94content --></div>
+          </div>
+          <div id="Page95" class="customPage" >
+            <div id="Page95content" class="customPageContent"><!-- Page95content --></div>
+          </div>
+          <div id="Page96" class="customPage" >
+            <div id="Page96content" class="customPageContent"><!-- Page96content --></div>
+          </div>
+          <div id="Page97" class="customPage" >
+            <div id="Page97content" class="customPageContent"><!-- Page97content --></div>
+          </div>
+          <div id="Page98" class="customPage" >
+            <div id="Page98content" class="customPageContent"><!-- Page98content --></div>
+          </div>
+          <div id="Page99" class="customPage" >
+            <div id="Page99content" class="customPageContent"><!-- Page99content --></div>
+          </div>
+          <div id="Page100" class="customPage" >
+            <div id="Page100content" class="customPageContent"><!-- Page100content --></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <footer class="container-fluid card bg-faded card-block mb-3 card bg-faded card-block mb-3-square card bg-faded card-block mb-3-footer">
+        <div class="row">
+            <div class="col-md-3">
+                 <h5 class="h4">ABOUT</h5>
+                <p>Advance School of Wrestling provides specialized wrestling training and
+                    techniques to wrestlers of all ages in the Madison, WI area. Our programs
+                    help athletes reach their full potential with wrestling technique training,
+                    wrestling fundamentals, strength and conditioning, mental development and
+                    nutrition. Our coaches bring 30+ years of expertise that guides athletes
+                    to a new level.</p> <a href="/about-wi-wrestling-school/" class="btn btn-black">Learn More</a>
+            </div>
+            <div class="col-md-3">
+                 <h5 class="h4">Location</h5>
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2915.120188446283!2d-89.3053565!3d43.0599397!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8806510b37fb46ff%3A0x75ab8c584dc35376!2sADVANCE+School+of+Wrestling!5e0!3m2!1sen!2sus!4v1456345742644"
+                    class="embed-responsive-item" frameborder="0" style="border: 0px;" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+            </div>
+            <div class="col-md-3">
+                 <h5 class="h4">CONTACT US</h5>
+     <address>
+
+                2556A Advance Road<br />
+
+                Madison WI 53718,<br />
+
+                Phone: (608) 469-2920<br />
+
+                Email: <a href="mailto: brad@advancewrestling.com">brad@advancewrestling.com</a>
+
+              </address>
+     <a href="/contact-us/" class="btn btn-black">Let's Talk</a>
+            </div>
+            <div class="col-md-3">
+                 <h5>PROGRAMS</h5>
+                <ul>
+                    <li><a href="http://advancewrestling.greenrope.com/wrestling-training-wi">All Programs</a>
+                    </li>
+                    <li><a href="http://advancewrestling.greenrope.com/high-school-wrestling-wi">Highschool</a>
+                    </li>
+                    <li><a href="http://advancewrestling.greenrope.com/kids-wrestling-wi">Kids (3rd-8th)</a>
+                    </li>
+                    <li><a href="http://advancewrestling.greenrope.com/private-training-sessions">Private Sessions</a>
+                    </li>
+                    <li><a href="http://advancewrestling.greenrope.com/focus-training-groups">Focus Groups</a>
+                    </li>
+                    <li><a href="http://advancewrestling.greenrope.com/wrestling-team-clinincs">Team Clinics</a>
+                    </li>
+                    <li><a href="http://advancewrestling.greenrope.com/strength-conditioning">Strength &amp; Conditioning</a>
+                    </li>
+                    <li><a href="http://advancewrestling.greenrope.com/nutrition">Nutrition</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <p>© 2016 Advanced School of Wrestling, LLC.</p> <small>Design by <a href="http://www.alternativead.com/" target="_blank">Alternative Advertising</a></small>
+            </div>
+            <div class="col-md-3">
+                <img src="//advancewrestling.greenrope.com/users/myteam41396/Media240.png"
+                alt="WWF - Wisconsin Wresting Federation" width="55" height="auto" style="margin-right: 25px;"
+                />
+                <img src="//advancewrestling.greenrope.com/users/myteam41396/Media239.png"
+                alt="USA Wresting" width="75" height="auto" />
+            </div>
+        </div>
+    </footer>
+    <!-- /container-fluid -->
+
+    <!--example html for the gallery-->
+    <!--<div class="container section-padding">-->
+    <!--  <div class="row">-->
+    <!--    <div class="col-sm-12">-->
+    <!--      <div id="gallery-container" data-chocolat-title="ASOW Gallery"></div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</div>-->
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//advancewrestling.greenrope.com/users/myteam41396/Media172.js"></script>
+    <script src="/main.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-82646933-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
